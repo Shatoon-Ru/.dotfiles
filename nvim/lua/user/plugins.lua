@@ -46,6 +46,10 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim"                -- Реализация всплывающего API из vim в Neovim (необходим другим плагинам)
   use "nvim-lua/plenary.nvim"              -- Полезные функции lua, используемые множеством плагинов
 
+  -- Цветовые схемы 
+  use "EdenEast/nightfox.nvim"
+  use 'folke/tokyonight.nvim'
+  
   -- Автоматическая настройка вашей конфигурации после клонирования packer.nvim
   -- Поместите это в конец после всех плагинов
   if PACKER_BOOTSTRAP then
