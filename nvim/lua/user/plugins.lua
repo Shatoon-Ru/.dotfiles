@@ -48,7 +48,9 @@ return packer.startup(function(use)
 
   -- Цветовые схемы 
   use "EdenEast/nightfox.nvim"
-  use 'folke/tokyonight.nvim'
+  use "folke/tokyonight.nvim"
+  use "lunarvim/darkplus.nvim"
+  use "lunarvim/onedarker.nvim"
   
   -- Автоматическая настройка вашей конфигурации после клонирования packer.nvim
   -- Поместите это в конец после всех плагинов
