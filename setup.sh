@@ -9,7 +9,7 @@ git submodule update
 # какие каталоги должны быть доступны для установки всеми пользователями,
 # включая пользователя root
 base=(
-    bash,
+    #bash
     zsh
 )
 
@@ -17,7 +17,7 @@ base=(
 # папки, которые должны быть установлены только 
 # для локального пользователя
 useronly=(
-    git
+    dwm git nvim picom ranger redshift
 )
 
 # run the stow command for the passed in directory ($2) in location $1
@@ -45,7 +45,7 @@ done
 # install only user space folders
 # устанавка папок пользовательского пространства
 for app in ${useronly[@]}; do
-    if [[!"$(whoami)" = *"root"*]]; then
+    if [[ "$(whoami)" != *"root"* ]]; then
         stowit "${HOME}" $app 
     fi
 done
