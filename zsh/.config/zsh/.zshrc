@@ -1,9 +1,7 @@
 #!/bin/sh
-export ZDOTDIR=$HOME/.config/zsh
-# HISTFILE=~/.zsh_history
 setopt appendhistory
-
 # some useful options (man zshoptions)
+
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments
 stty stop undef		# Disable ctrl-s to freeze terminal.
@@ -85,8 +83,8 @@ xset r rate 210 40
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="alacritty"
-export BROWSER="brave"
+export TERMINAL="mint-terminal"
+export BROWSER="yandex-browser"
 
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
