@@ -1,0 +1,89 @@
+! -*-	mode: xrdb;	-*-
+!****************************************
+!           Настройка шрифтов
+!****************************************
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!****************************************
+!           Настройка Цветов
+!****************************************
+!
+!#include ".local/share/colors/2dark"
+!#include ".local/share/colors/cp"
+!#include ".local/share/colors/dui"
+!#include ".local/share/colors/ll"
+!#include ".local/share/colors/ln"
+!#include ".local/share/colors/lui"
+!#include ".local/share/colors/materia"
+!#include ".local/share/colors/moonlight"
+!#include ".local/share/colors/nord"
+!#include ".local/share/colors/norden"
+#include ".local/share/colors/tn"
+!#include ".local/share/colors/calc"
+
+!URxvt.font: xft:Hack Nerd Font Mono:size=9
+
+!!! xlsfonts | grep ttyp0    &&    fc-list : family style
+!URxvt.font: xft:UW Ttyp0:antialias=False:pixelsize=14,xft:Hack Nerd Font Mono:size=9,xft:Noto Color Emoji,xft:Symbola
+!URxvt.boldFont: xft:UW Ttyp0:antialias=False:pixelsize=14,xft:Hack Nerd Font Mono:size=9,xft:Noto Color Emoji,xft:Symbola
+
+!! cozette-otb
+!URxvt.font: xft:Cozette:size=10,xft:Hack Nerd Font Mono:size=9,xft:Symbola
+!URxvt.boldFont: xft:Cozette:size=10,xft:Hack Nerd Font Mono:size=9,xft:Symbola
+
+URxvt.font: xft:Hack Nerd Font Mono:size=12,xft:Noto Color Emoji,xft:Symbola
+URxvt.boldFont: xft:Hack Nerd Font Mono:size=12,xft:Noto Color Emoji,xft:Symbola
+
+!URxvt.termname: xterm-256color
+URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
+URxvt.geometry: 82x26
+URxvt.internalBorder: 15
+URxvt.letterSpace: -1
+URxvt.antialias: true
+URxvt.pointerBlank: true
+URxvt.saveLines:    7000
+URxvt.scrollBar:    false
+URxvt.cursorBlink:  true
+URxvt.urgentOnBell: true
+! Не прокручивать при выводе
+URxvt.scrollTtyOutput: false
+! Прокуручивать по отношению к буферу (Прокрутка мышью или Shift+Page Up)
+URxvt.scrollWithBuffer: true
+! Прокрутка по нажатию клавиши
+URxvt.scrollTtyKeypress: true
+URxvt.transparent:false
+URxvt.depth: 32
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! Включение расширений perl URxvt
+URxvt.perl-ext-common: default,matcher,clipboard,keyboard-select,resize-font,url-select
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+URxvt.matcher.button: 1
+URxvt.keysym.C-u: perl:url-select:select_next
+
+URxvt.keysym.C-Escape: perl:keyboard-select:activate
+URxvt.keysym.C-/: perl:keyboard-select:search
+
+URxvt.clipboard.autocopy: true
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! ctrl + arrows
+URxvt.keysym.Control-Up:    \033[1;5A
+URxvt.keysym.Control-Down:  \033[1;5B
+URxvt.keysym.Control-Left:  \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
+! urxvt-resize-font-git
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
